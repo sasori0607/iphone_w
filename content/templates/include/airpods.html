@@ -1,0 +1,68 @@
+{% if object.connector1 != None and object.connector1 != '-'  %}
+
+        <div class="connector">
+            <p class="font-weight-bold">Разъем</p>
+            <div class="row">
+                <div>
+                    <button disabled>
+                        <p>{{ object.connector1 }}</p>
+                    </button>
+                </div>
+                {% if object.connector2 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.connector2 }}</p>
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
+{% endif %}
+
+{% if object.charging1 != None and object.charging1 != '-'  %}
+
+        <div class="charging">
+            <p class="font-weight-bold">Зарядка</p>
+            <div class="row">
+                <div>
+                    <button disabled>
+                        <p>{{ object.charging1 }}</p>
+                    </button>
+                </div>
+                {% if object.charging2 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.charging2 }}</p>
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
+{% endif %}
+
+{% if object.coverings1 != None and object.coverings1 != '-'  %}
+
+        <div class="coverings">
+            <p class="font-weight-bold">Покрытия</p>
+            <div class="row">
+                <div>
+                    <button disabled>
+                        <p>{{ object.coverings1 }}</p>
+                    </button>
+                </div>
+                {% if object.coverings2 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.coverings2 }}</p>
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
+{% endif %}

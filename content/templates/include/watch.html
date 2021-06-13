@@ -1,0 +1,63 @@
+{% if object.size_corps1 != None %}
+    <div class="size">
+        <p class="font-weight-bold">Размер корпуса</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{ object.size_corps1 }}</p>
+                </button>
+            </div>
+            {% if object.size_corps2 != None %}
+            <div>
+                <button>
+                    <p>{{ object.size_corps2 }}</p>
+                </button>
+            </div>
+          {% endif %}
+        </div>
+
+    </div>
+{% endif %}
+
+
+{% if object.version1 != None %}
+    <div class="version_watch">
+        <p class="font-weight-bold">Версия</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{ object.version1 }}</p>
+                </button>
+            </div>
+            {% if object.version2 != None %}
+            <div>
+                <button>
+                    <p>{{ object.version2 }}</p>
+                </button>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+{% endif %}
+
+{% if object.belt1 != None %}
+    <div class="belt">
+        <p class="font-weight-bold">Тип ремешка</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{ object.belt1 }}</p>
+                </button>
+            </div>
+            {% if object.version2 != None %}
+            <div>
+                <button>
+                    <p>{{ object.belt2 }}</p>
+                </button>
+            </div>
+            {% endif %}
+        </div>
+
+    </div>
+{% endif %}

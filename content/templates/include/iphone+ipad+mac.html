@@ -1,0 +1,122 @@
+{% load static %}
+
+
+{% if object.TwoSimTrue == True %}
+    <div class="sim">
+        <p class="font-weight-bold">Сколько симок тебе надо?</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>1 Sim</p>
+                    <input value="{{object.SimPrise1}}" type="text" hidden>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <p>2 Sim</p>
+                </button>
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+
+
+{% if object.IpadVersion == True %}
+    <div class="version">
+        <p class="font-weight-bold">Версия</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>Wi-Fi</p>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <p>Wi-Fi + 4G</p>
+                </button>
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+
+{% if object.MemoryVolume1 != None %}
+    <div class="memory">
+        <p class="font-weight-bold">Объем памяти</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{object.MemoryVolume1}}</p>
+                    <input value="{{object.MemoryPrice1}}" type="text" hidden>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <p>{{object.MemoryVolume2}}</p>
+                    <input value="{{object.MemoryPrice2}}" type="text" hidden>
+                </button>
+            </div>
+            {% if object.MemoryVolume3 != None %}
+            <div>
+                <button>
+                    <p>{{object.MemoryVolume3}}</p>
+                    <input value="{{object.MemoryPrice3}}" type="text" hidden>
+                </button>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+{% endif %}
+
+
+
+{% if object.processor1 != None %}
+    <div class="processor">
+        <p class="font-weight-bold">Процесор</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{ object.processor1 }}</p>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <p>{{ object.processor2 }}</p>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+{% endif %}
+
+
+{% if object.RAM1 != None %}
+    <div class="ram">
+        <p class="font-weight-bold">Объем оперативной памяти</p>
+        <div class="row">
+            <div>
+                <button disabled>
+                    <p>{{ object.RAM1 }}</p>
+                </button>
+            </div>
+            <div>
+                <button>
+                    <p>{{ object.RAM2 }}</p>
+                </button>
+            </div>
+
+            {% if object.RAM3 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.RAM3 }}</p>
+                    </button>
+                </div>
+            {% endif %}
+
+        </div>
+
+    </div>
+
+{% endif %}

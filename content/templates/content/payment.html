@@ -1,0 +1,30 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %}
+    Оплата
+{% endblock %}
+
+{% block body %}
+
+<div class="payment">
+  <div class="container">
+        <h1 class="m-5">Оплата товара</h1>
+        <h2>В магазине:</h2>
+      <ul>
+          <li>наличка</li>
+          <li>терминал с Apple Pay и Google Pay (+3% к сумме)</li>
+          <li>перевод на карту (+1% к сумме)</li>
+          <li>Безналичная оплата предприятием – все будет, но с учетом налогов это плюс 6% (и да – без НДС)</li>
+      </ul>
+      <p>Если остались вопросы – мы на связи:</p>
+      <a href="tel:+380633322836">+380633322836</a>
+      <br>
+      <a href="mailto: info@mail.com">info@mail.com</a>
+  </div>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% if object.modelCase1 != None and object.modelCase1 != '-'  %}
+
+        <div class="connector">
+            <p class="font-weight-bold">Версия</p>
+            <div class="row">
+                <div>
+                    <button disabled>
+                        <p>{{ object.modelCase1 }}</p>
+                    </button>
+                </div>
+                {% if object.modelCase2 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.modelCase2 }}</p>
+                    </button>
+                </div>
+                {% endif %}
+                {% if object.modelCase3 != None %}
+                <div>
+                    <button>
+                        <p>{{ object.modelCase3 }}</p>
+                    </button>
+                </div>
+                {% endif %}
+            </div>
+
+        </div>
+
+{% endif %}

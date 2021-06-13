@@ -1,0 +1,98 @@
+{% extends 'content/base.html' %}
+{% load static %}
+{% block title %}
+    Ваши покупки
+
+{% endblock %}
+
+{% block body %}
+
+<div class="you_basket mt-3">
+
+    <div class="container">
+
+            {% for i in object %}
+            <div class="main">
+                <input class="price" value="{{ i.price }}" type="text" hidden>
+                <div class="row">
+                    <div class="img">
+                        <img src="{{ i.img_url }}" alt="++">
+                    </div>
+                    <div class="content">
+                        <h5 class="h30">
+                            {{ i.title }}
+                            {% if i.MemoryVolume != None  %}
+                                {{i.MemoryVolume}}гб
+                            {% endif %}
+                        </h5>
+                        <div class="h30 quantity">
+
+                            <input class="category" value="{{ i.category }}" type="text" hidden>
+                            <input class="slug" value="{{ i.slug }}" type="text" hidden>
+                            <input class="color" value="{{ i.color }}" type="text" hidden>
+                            <input class="TwoSimTrue" value="{{ i.TwoSimTrue }}" type="text" hidden>
+                            <input class="IpadVersion" value="{{ i.IpadVersion }}" type="text" hidden>
+                            <input class="MemoryVolume" value="{{ i.MemoryVolume }}" type="text" hidden>
+                            <input class="ram" value="{{ i.RAM }}" type="text" hidden>
+
+                            <input class="size_corps" value="{{ i.size_corps }}" type="text" hidden>
+                            <input class="version" value="{{ i.version }}" type="text" hidden>
+                            <input class="belt" value="{{ i.belt }}" type="text" hidden>
+
+                            <input class="connector" value="{{ i.connector }}" type="text" hidden>
+                            <input class="charging" value="{{ i.charging }}" type="text" hidden>
+                            <input class="coverings" value="{{ i.coverings }}" type="text" hidden>
+
+
+
+<!--                            <input value="{{ i. }}" type="text" hidden>-->
+
+                            <div class="icon minus">
+                                <img src="{% static 'content/img/minus.png'%}" alt="">
+
+                            </div>
+                            <div class="number">
+                                <p>{{i.quantity}}</p>
+                            </div>
+                            <div class="icon plus">
+                                <img src="{% static 'content/img/plus.png'%}" alt="">
+                            </div>
+                        </div>
+                        <div class="h30"> </div>
+
+                    </div>
+                    <div class=""></div>
+                </div>
+
+            </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+<div class="full_price">
+
+    <div class=""><p>Сумма к оплате:</p></div>
+
+    <div class="bubble"><p class="number"></p></div>
+
+    <div class="knopka">
+
+            <button>
+                Оформить
+            </button>
+
+    </div>
+</div>
+
+
+    <div class="body_form_basket concealer">
+        <div class="form_basket_hidden">
+            {% include 'include/form_basket.html' %}
+        </div>
+    </div>
+
+
+{% endblock %}

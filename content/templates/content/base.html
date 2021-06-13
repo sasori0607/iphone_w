@@ -1,0 +1,190 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'content/img/test.ico' %}" type=”image/x-icon”>
+    <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> {% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'content/main.css' %}">
+
+</head>
+<body>
+
+
+
+
+
+
+<div>
+
+    <div class="nav">
+
+       <div class="container">
+            <div class="logo">
+                <a href="/"><h6>Ishop_Uman</h6></a>
+            </div>
+
+           <form class="basket" action="">
+               {% csrf_token %}
+           </form>
+
+            <div class="img_menu"><img src="{% static 'content/img/menu.webp' %}" alt=""></div>
+            <div id="menu" class="menu">
+
+                <div class="cont">
+                    <div class="clos">X</div>
+                    <ul>
+                        <li><a href="/shop/iphone">iPhone</a></li>
+                        <li><a href="/shop/ipad">iPad</a></li>
+                        <li><a href="/shop/mac">Mac</a></li>
+                        <li><a href="/shop/watch">Watch</a></li>
+                        <li><a href="/shop/airpods">AirPods</a></li>
+                        <li><a href="/shop/accessories">Аксессуары</a></li>
+                        <li><a href="">Скидки</a></li>
+                        <li><a href="/repairs">Ремонт</a></li>
+<!--                        <li><a href="">Обмен</a></li>-->
+<!--                        <li><a href="">Контакты</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="background">
+
+                </div>
+
+            </div>
+
+       </div>
+
+
+    </div>
+        <div class="dummy">
+
+        </div>
+</div>
+
+{% if messages %}
+    <div class="ss">
+
+        <div class="mess">
+            {% for i in messages %}
+                {{ i }}
+            {% endfor %}
+        </div>
+
+    </div>
+{% endif %}
+
+
+<div class="body">
+
+    {% block body %}
+
+
+    {% endblock %}
+
+</div>
+
+<footer class="pt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    Посмотреть и потрогать: г. Умань
+                    <br>
+                    <a href="https://goo.gl/maps/TPwv24XpYkzGLMhs9">Умань, вул. Горького 6</a> -
+                    <a href="tel:+380633322836">+380633322836</a>
+                    <br>
+                </p>
+                <p>
+                    В режиме:
+                    <br>
+                    будни с 10 до 20
+                    <br>
+                    суббота с 12 до 18
+                    <br>
+                    воскресенье выходной
+                </p>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="{% url 'delivery' %}">Способы доставки</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'payment' %}">Оплата товара</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'guarantee' %}">Условия возврата и гарантия</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'public_offer' %}">Публичная оферта</a>
+                        </li>
+
+
+                    </ul>
+                </p>
+
+            </div>
+
+            <div class="col-md-6">
+                Мы на карте
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1860.0556734610313!2d30.216565755485604!3d48.752942406997725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d20da735a19721%3A0x87694e6f39135c3e!2z0YPQuy4g0JPQvtGA0YzQutC-0LPQviwgNiwg0KPQvNCw0L3RjCwg0KfQtdGA0LrQsNGB0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDIwMzAw!5e0!3m2!1sru!2sua!4v1621812669556!5m2!1sru!2sua"
+                        width="100%" height="70%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+<a href="{% url 'you_basket' %}">
+
+    <div class="basket_icon">
+
+        <img class="basket_icon_img" src="{% static 'content/img/korz.png' %}" alt="">
+        <p class="basket_icon_p">1</p>
+    </div>
+
+
+<div>
+
+</a>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!--    Подключка Слайдера-->
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'slick/slick-theme.css' %}">
+    <!--    Подключка Анимаций-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!--    Подключка JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    {% block script %}
+
+    {% endblock %}
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script type="text/javascript" src="{% static 'content/main.min.js' %}"></script>
+
+
+
+</div>
+
+</body>
+</html>

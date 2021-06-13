@@ -1,0 +1,107 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %}
+    Ремонт Apple
+{% endblock %}
+
+{% block body %}
+
+<div class="repairs">
+  <div class="container">
+    <div class="choice">
+      <div class="">
+        <h2>Что вам нужно починить?</h2>
+      </div>
+      <div class="images row">
+
+        <div class="image low background_choice">
+          <div class="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuh3GJh6r70Lgq8tIhpodEwivRsO2lhoAxxA&usqp=CAU" alt="">
+            <p>iPhone, iPod, iPad</p>
+          </div>
+        </div>
+        <div class="vl"></div>
+        <div class="image high">
+          <div class="">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuh3GJh6r70Lgq8tIhpodEwivRsO2lhoAxxA&usqp=CAU" alt="">
+            <p>iMac, Mac Pro, Mac Mini</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="block2">
+      <div class="table">
+        <table border="1">
+          <tr>
+            <th>Услуга</th>
+            <td>Цена</td>
+          </tr>
+          <tr>
+            <th>Диагностика ( в случае отказа от ремонта)</th>
+            <td>250</td>
+          </tr>
+          <tr>
+            <th>Замена дисплейного модуля</th>
+            <td>от 350</td>
+          </tr>
+          <tr>
+            <th>Замена дисплея</th>
+            <td>от 500</td>
+          </tr>
+          <tr>
+            <th>Замена матрицы</th>
+            <td>от 800</td>
+          </tr>
+          <tr>
+            <th>Замена сенсорного стекла</th>
+            <td>от 500</td>
+          </tr>
+          <tr>
+            <th>Обновление программного обеспечения</th>
+            <td>от 250</td>
+          </tr>
+          <tr>
+            <th>Чистка от пыли</th>
+            <td>от 300</td>
+          </tr>
+          <tr>
+            <th>Перенос данных</th>
+            <td>от 250</td>
+          </tr>
+          <tr>
+            <th>Перенос телефонной книги</th>
+            <td>от 200</td>
+          </tr>
+          <tr>
+            <th>Прошивка</th>
+            <td>от 250</td>
+          </tr>
+          <tr>
+            <th>Ребоуллинг чипа</th>
+            <td>от 1200</td>
+          </tr>
+          <tr>
+            <th>Создание и настройка Apple-аккунта + установка приложений</th>
+            <td>от 200</td>
+          </tr>
+          <tr>
+            <th>Срочный ремонт(до конца дня)</th>
+            <td>от 250</td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="{% static 'content/repairs.js' %}"></script>
+{% endblock %}

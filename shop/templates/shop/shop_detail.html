@@ -1,0 +1,173 @@
+{% extends 'content/base.html' %}
+{% load static %}
+
+{% block title %}
+    XXXXX
+{% endblock %}
+
+{% block body %}
+
+<div class="tovar_detail container">
+
+
+    <div class="row">
+        <div class="col-md-5 main_img">
+            <img src="{{ object.img.url }}" alt="{{object.slug}}">
+        </div>
+
+        <div class="col-md-7 p-4">
+            <div class="title">
+                <h2>{{object.title}}</h2>
+                <input value="{{ slug }}"  type="text" hidden>
+            </div>
+
+
+             {% if slug == 'iphone' %}
+                <p>Новый айфон — это всегда радость, как будто ты заново открываешь Америку.
+                В придачу к отличному iPhone 12, ты можешь выбрать
+                <a href="">оригинальные аксессуары</a></p>
+             {% endif %}
+            {% if slug == 'ipad' %}
+                <p>
+                    Твой следующий компьютер это iPad. Совершенная комбинация стекла и металла.
+                    Используй его для работы, творчества и развлечений.
+                    И не забывай про <a href="">аксессуары.</a>
+                </p>
+             {% endif %}
+            {% if slug == 'mac' %}
+                <p>
+                    iMac покупают для солидной работы. При чем как дизайнеру,
+                    так и на ресепшн – и там и там солидно!
+                    Что может понадобиться для отличного iMac? Выбирай из
+                    <a href="">оригинальные аксессуары</a>
+                </p>
+             {% endif %}
+            {% if slug == 'watch' %}
+                <p>
+                    Часы из будущего у тебя на руке в два счета.
+                </p>
+             {% endif %}
+
+
+
+
+
+
+
+
+            <div class="row pictures mb-1">
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-delivery.png' %}" alt=""></a></div>
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-exchange.png' %}" alt=""></a></div>
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-messenger.png' %}" alt=""></a></div>
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-payment.png' %}" alt=""></a></div>
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-used.png' %}" alt=""></a></div>
+                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-warranty.png' %}" alt=""></a></div>
+            </div>
+
+            <div class="guarantee">
+                    <p class="font-weight-bold">Дополнительная гарантия магазина</p>
+                    <div class="row">
+                        <div>
+                            <button disabled>
+                                6м
+                                <input value="1500" type="text" hidden>
+                            </button>
+
+                        </div>
+                        <div>
+                            <button>
+                                12м
+                                <input value="{{object.SimPrise2}}" type="text" hidden>
+                            </button>
+                        </div>
+                    </div>
+
+            </div>
+
+
+            {% include 'include/iphone+ipad+mac.html' %}
+            {% include 'include/watch.html' %}
+            {% include 'include/airpods.html' %}
+            {% include 'include/accessories.html' %}
+
+
+
+
+            {{ i.sim }}
+
+            <p class="font-weight-bold">Цвет</p>
+            <div class="row">
+                 {% if object.сolor1 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor1.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor1.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                 {% endif %}
+
+                 {% if object.сolor2 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor2.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor2.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                 {% endif %}
+                 {% if object.сolor3 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor3.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor3.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                 {% endif %}
+                 {% if object.сolor4 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor4.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor4.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                {% endif %}
+                 {% if object.сolor5 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor5.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor5.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                 {% endif %}
+                 {% if object.сolor6 != None %}
+                    <div class="color m-1">
+                        <div class="img">
+                            <img src="{{object.сolor6.img.url}}" alt="123">
+                            <input class="name" value="{{object.сolor6.slug}}" type="text" hidden>
+                        </div>
+                    </div>
+                 {% endif %}
+
+
+            </div>
+
+            <hr>
+            <div class="price row">
+                <h4 class="font-weight-bold"></h4>
+                <button class="buy">Купить</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="description mb-5">
+        <p class="font-weight-bold">Характеристики:</p>
+        <p>{{ object.description|linebreaks }}</p>
+        <p class="font-weight-bold">Что в комплекте:</p>
+        <img src="{{ object.img_description.url }}" alt="">
+    </div>
+
+</div>
+
+
+{% endblock %}
