@@ -1,5 +1,5 @@
 /pictures/*
 runtime.txt
-requirements.txt
+
 requirements
 db.sqlite3
