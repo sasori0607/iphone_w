@@ -1,5 +1,5 @@
 /pictures/*
 runtime.txt
-
+/main/settings.py/
 requirements
 db.sqlite3
