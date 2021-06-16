@@ -55,6 +55,8 @@ class Basket(models.Model):
 
     coverings = models.CharField(max_length=120, null=True, blank=True,
                                 verbose_name='Покрытия')
+    modelCase= models.CharField(max_length=120, null=True, blank=True,
+                                verbose_name='Модель привязки чехла к айфону')
 
     price = models.DecimalField(max_digits=9, decimal_places=0, verbose_name="Цена")
     quantity = models.IntegerField(default=1, verbose_name="Количество")
@@ -400,17 +402,19 @@ class Accessories(models.Model):
 
 class AccessoriesPart(models.Model):
 
-    color = models.ForeignKey('Color', verbose_name='Цвет', on_delete=models.CASCADE)
+    color = models.ForeignKey('Color', verbose_name='Цвет', on_delete=models.CASCADE, default='-')
 
     anchor = models.ForeignKey('Accessories', verbose_name='Модель привязки', on_delete=models.CASCADE)
 
     vendorСode = models.CharField(max_length=120, verbose_name='Артикул')
 
     MemoryVolume = models.CharField(max_length=120, null=True, blank=True,
-                                     verbose_name='Объем памяти(При наличие)')
+                                     verbose_name='Объем памяти(При наличие)',
+                                    default='-')
 
     modelCase = models.CharField(max_length=120, null=True, blank=True,
-                                  verbose_name='Модель привязки чехла')
+                                  verbose_name='Модель привязки чехла',
+                                 default='-')
 
 
     price = models.DecimalField(max_digits=5, default=0, decimal_places=0, verbose_name='Доп ценна за цвет')

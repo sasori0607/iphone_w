@@ -13,10 +13,14 @@
 
             {% for i in object %}
             <div class="main">
-                <input class="price" value="{{ i.price }}" type="text" hidden>
-                <div class="row">
+                <input class="price " value="{{ i.price }}" type="text" hidden>
+                <div class="m_row" >
                     <div class="img">
-                        <img src="{{ i.img_url }}" alt="++">
+
+
+                            <img src="{{ i.img_url }}" alt="++">
+
+
                     </div>
                     <div class="content">
                         <h5 class="h30">
@@ -42,6 +46,7 @@
                             <input class="connector" value="{{ i.connector }}" type="text" hidden>
                             <input class="charging" value="{{ i.charging }}" type="text" hidden>
                             <input class="coverings" value="{{ i.coverings }}" type="text" hidden>
+                            <input class="modelCase" value="{{ i.modelCase }}" type="text" hidden>
 
 
 

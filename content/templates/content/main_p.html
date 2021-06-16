@@ -9,10 +9,23 @@
 
 <div class="main_p">
 
-    <div class="body1">
-        <div class="img">
+    <div class="body3">
 
+
+        <div class="fullwidth-bg">
+            <div class="video-layer">
+            </div>
+            <div class="propk">
+
+                <video loop muted autoplay poster="/uploads/video-bg-alt.jpg" class="fullscreen-bg__video">
+                    <source src="{% static 'content/video/iphone12.mp4' %}" type="video/mp4">
+                    <source src="{% static 'content/video/iphone12.mp4' %}" type="video/webm">
+                </video>
+
+            </div>
         </div>
+
+
     </div>
     <div class="body2 ">
         <div class="container">
@@ -114,24 +127,37 @@
             </div>
         </div>
     </div>
-    <div class="body3">
+    <div class="body1">
+        <div class="img">
 
-
-        <div class="fullwidth-bg">
-            <div class="video-layer">
-                <h1>Заголовок<br>для фонового видео на сайте</h1>
-            </div>
-            <div class="propk">
-
-                <video loop muted autoplay poster="/uploads/video-bg-alt.jpg" class="fullscreen-bg__video">
-                    <source src="{% static 'content/video/iphone12.mp4' %}" type="video/mp4">
-                    <source src="{% static 'content/video/iphone12.mp4' %}" type="video/webm">
-                </video>
-
-            </div>
         </div>
+    </div>
+    <div class="body4">
+        <div class="container">
 
+            <h2>Любимые товары наших покупалетей:</h2>
+            <div class="row">
+                <div class="part">
+                    <img src="{% static 'content/img/preview/reColorIphone.png' %}" alt="">
+                    <div class="">123</div>
+                </div>
+                <div class="part">
+                    <img src="{% static 'content/img/preview/reColorIphone.png' %}" alt="">
+                    <div class="">123</div>
+                </div>
+                <div class="part">
+                    <img src="{% static 'content/img/preview/reColorIphone.png' %}" alt="">
+                    <div class="">123</div>
+                </div>
 
+            </div>
+            <div class="row">
+                <div class="">+</div>
+                <div class="">+</div>
+                <div class="">+</div>
+            </div>
+
+        </div>
     </div>
 
 

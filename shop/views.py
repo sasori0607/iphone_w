@@ -143,6 +143,13 @@ def price(request):
                                            charging=charging, coverings=coverings,
                                          )
 
+    if data['category'] == 'accessories':
+
+        price = AccessoriesPart.objects.filter(color__slug=data['color'], MemoryVolume=data['memory'],
+                                                anchor__slug=data['slug'], modelCase=data['modelCase'],
+                                                )
+
+
     if price:
         for i in price:
             print(i.price)
@@ -381,6 +388,52 @@ def basket(request):
                          )
             new.save()
 
+    if data['category'] == 'accessories':
+
+        if 'memory' in data:
+            memory = data['memory']
+        else:
+            memory = '-'
+        print(data['modelCase'])
+        if 'modelCase' in data:
+            modelCase = data['modelCase']
+        else:
+            modelCase = '-'
+
+        object = AccessoriesPart.objects.filter(color__slug=data['color'], MemoryVolume=memory,
+                                          anchor__slug=data['slug'], modelCase=modelCase,
+                                          )
+        print(object)
+        for i in object:
+            price = i.price
+            print(price)
+
+        object = Basket.objects.filter(session_key = session_key, category=data['category'],slug=data['slug'],
+                                       color=data['color'], MemoryVolume=memory,
+                                       modelCase=modelCase)
+
+
+        if object:
+
+
+            object[0].quantity +=1
+            object[0].save()
+        else:
+            new = Basket(session_key = session_key,
+                         category=data['category'],
+                         slug=data['slug'],
+                         color=data['color'],
+                         MemoryVolume=memory,
+                         modelCase=modelCase,
+                         title=data['title'],
+                         price=price,
+                         # RAM=data["ram"],
+                         # size_corps=data["size"],
+                         # version=data["version_watch"],
+                         # belt=data["belt"],
+                         img_url=data['img']
+                         )
+            new.save()
 
 
     return_dick = {'11':'22'}
@@ -495,12 +548,34 @@ def basket_minus(request):
             else:
                 coverings = '-'
 
+
+
         vars = Basket.objects.filter(session_key=session_key, category=data['category'], slug=data['slug'],
                                        color=data['color'], connector=connector,
                                        charging=charging, coverings=coverings,
                                        )
 
+    elif data['category'] == 'accessories':
+
+        if 'memory' in data:
+            memory = data['memory']
+        else:
+            memory = '-'
+
+        if 'modelCase' in data:
+            modelCase = data['modelCase']
+        else:
+            modelCase = '-'
+        print(modelCase, memory)
+
+        vars = Basket.objects.filter(session_key=session_key, category=data['category'], slug=data['slug'],
+                                   color=data['color'], MemoryVolume=memory,
+                                   modelCase=modelCase)
+
+
+    print(vars)
     for var in vars:
+        print(var)
 
         quantity_new = var.quantity
         if quantity_new > 1:
@@ -584,6 +659,22 @@ def basket_plus(request):
                                        charging=charging, coverings=coverings,
                                        )
 
+    elif data['category'] == 'accessories':
+
+        if 'memory' in data:
+            memory = data['memory']
+        else:
+            memory = '-'
+
+        if 'modelCase' in data:
+            modelCase = data['modelCase']
+        else:
+            modelCase = '-'
+        print(modelCase, memory)
+
+        vars = Basket.objects.filter(session_key=session_key, category=data['category'], slug=data['slug'],
+                                   color=data['color'], MemoryVolume=memory,
+                                   modelCase=modelCase)
 
     for var in vars:
 
