@@ -215,7 +215,7 @@ body{
 @media (min-width: 1200px){
 
 .main_p .body1 .img{
-    background-image: url('/static/content/img/iphone-12-2.jpg');
+    background-image: url('/static/content/img/top.webp');
     background-repeat: no-repeat;
     background-position:center;
     height:100vh;
@@ -318,25 +318,37 @@ body{
 }
 
 @media (min-width: 1200px){
-.main_p .body4 .part{
-    width:25%;
-    text-align:center;
-}
-.main_p .body4 .part img{
-    max-height: 300px;
-    max-width: 80%;
-}
+    .main_p .body4 .part{
+        width:25%;
+        text-align:center;
+    }
+    .main_p .body4 .part img{
+        max-height: 300px;
+        max-width: 80%;
+    }
 }
 @media (max-width: 1200px){
-.main_p .body4 .part{
-    width:50%;
-    text-align:center;
+    .main_p .body4 .part{
+        width:50%;
+        text-align:center;
+    }
+    .main_p .body4 .part img{
+        height: 230px;
+        max-width: 100%;
+    }
 }
-.main_p .body4 .part img{
-    height: 300px;
-    max-width: 100%;
+
+@media (max-width: 540px){
+    .main_p .body4 .part{
+        width:100%;
+        text-align:center;
+    }
+    .main_p .body4 .part img{
+        height: 270px;
+        max-width: 100%;
+    }
 }
-}
+
 .body4 .part {
     transition: 0.8s; /* Время эффекта */
 }

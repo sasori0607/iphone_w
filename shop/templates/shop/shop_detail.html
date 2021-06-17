@@ -56,12 +56,12 @@
 
 
             <div class="row pictures mb-1">
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-delivery.png' %}" alt=""></a></div>
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-exchange.png' %}" alt=""></a></div>
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-messenger.png' %}" alt=""></a></div>
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-payment.png' %}" alt=""></a></div>
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-used.png' %}" alt=""></a></div>
-                <div class="picture"><a href=""><img src="{% static 'content/img/pictures_icon/cart-warranty.png' %}" alt=""></a></div>
+                <div class="picture"><a href="{% url 'delivery' %}"><img src="{% static 'content/img/pictures_icon/cart-delivery.png' %}" alt=""></a></div>
+                <div class="picture"><a href="{% url 'exchange' %}"><img src="{% static 'content/img/pictures_icon/cart-exchange.png' %}" alt=""></a></div>
+                <div class="picture"><a href="https://www.messenger.com/"><img src="{% static 'content/img/pictures_icon/cart-messenger.png' %}" alt=""></a></div>
+                <div class="picture"><a href="{% url 'payment' %}"><img src="{% static 'content/img/pictures_icon/cart-payment.png' %}" alt=""></a></div>
+                <div class="picture"><a href="{% url 'cart-used' %}"><img src="{% static 'content/img/pictures_icon/cart-used.png' %}" alt=""></a></div>
+                <div class="picture"><a href="{% url 'guarantee' %}"><img src="{% static 'content/img/pictures_icon/cart-warranty.png' %}" alt=""></a></div>
             </div>
 
             <div class="guarantee">

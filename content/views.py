@@ -17,3 +17,9 @@ def public_offer(reqest):
 
 def repairs(reqest):
     return render(reqest, 'content/repairs.html')
+
+def exchange(reqest):
+    return render(reqest, 'content/exchange.html')
+
+def cart_used(reqest):
+    return render(reqest, 'content/cart_used.html')
