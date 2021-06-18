@@ -21,5 +21,6 @@ def repairs(reqest):
 def exchange(reqest):
     return render(reqest, 'content/exchange.html')
 
+
 def cart_used(reqest):
     return render(reqest, 'content/cart_used.html')
