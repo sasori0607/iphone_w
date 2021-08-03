@@ -16,19 +16,17 @@
                 <input class="price " value="{{ i.price }}" type="text" hidden>
                 <div class="m_row" >
                     <div class="img">
-
-
-                            <img src="{{ i.img_url }}" alt="++">
-
-
+                        <img src="{{ i.img_url }}" alt="">
                     </div>
                     <div class="content">
-                        <h5 class="h30">
-                            {{ i.title }}
-                            {% if i.MemoryVolume != None  %}
-                                {{i.MemoryVolume}}гб
-                            {% endif %}
-                        </h5>
+                        <a href="/shop/{{i.category}}/{{i.slug}}">
+                            <h5 class="h30">
+                                {{ i.title }}
+                                {% if i.MemoryVolume != None  %}
+                                    {{i.MemoryVolume}}гб
+                                {% endif %}
+                            </h5>
+                        </a>
                         <div class="h30 quantity">
 
                             <input class="category" value="{{ i.category }}" type="text" hidden>

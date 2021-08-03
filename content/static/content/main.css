@@ -657,6 +657,12 @@ footer ul{
     width:35%;
     height:100%;
 }
+
+.you_basket .content a{
+    text-decoration:none;
+    color:black;
+}
+
 .m_row{
     height:100%;
     display:flex;
@@ -705,6 +711,10 @@ footer ul{
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.you_basket .main .content a h5{
+    padding-top:15px;
 }
 
 .you_basket .main .content .icon img{
