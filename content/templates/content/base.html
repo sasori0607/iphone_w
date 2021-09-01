@@ -2,12 +2,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="{% static 'content/img/test.ico' %}" type=”image/x-icon”>
+    <link rel="icon" href="{% static 'content/img/logo.webp' %}" type=”image/x-icon”>
     <meta charset="UTF-8">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title> {% block title %} {% endblock %}</title>
+    <meta name="description" content="{% block description %} {% endblock %}" />
+    {% block head %}  {% endblock %}
 
     <link rel="stylesheet" href="{% static 'content/main.css' %}">
 
@@ -25,7 +27,7 @@
 
        <div class="container">
             <div class="logo">
-                <a href="/"><h6>Ishop_Uman</h6></a>
+                <a href="/"><h6><img src="{% static 'content/img/sait_logo.webp' %}" alt=""> x-store</h6></a>
             </div>
 
            <form class="basket" action="">
