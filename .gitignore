@@ -1,4 +1,4 @@
 /pictures/
 runtime.txt
-/main/settings.py
+main/settings.py
 db.sqlite3
