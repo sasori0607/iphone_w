@@ -1,5 +1,0 @@
-.gitignore
-/pictures/
-runtime.txt
-main/settings.py
-db.sqlite3
