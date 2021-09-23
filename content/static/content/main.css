@@ -118,12 +118,14 @@ body{
     }
 
     .nav .menu ul{
-        padding:20px;
-        font-size:24px;
+        padding:40px;
+        font-size:22px;
     }
 
+
+
     .nav .menu ul li{
-        list-style-type: none;
+        border-bottom: 2px solid #c0b2b2;
         padding:3px;
     }
 
@@ -203,40 +205,85 @@ body{
 
 
 /*Главная страница*/
+.main_p .body0 {
+    background-color: #fbfbfd;
+    background-image: url('/static/content/img/iphone_13pro.jpg');
+    background-position:center center;
+    background-size:cover;
+    height:66vh;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
 
+a .body0 {
+  color: #0e0d0d !important;
+  text-decoration: none !important;
+}
+
+
+a:hover {
+    color: #0056b3;
+    text-decoration: none!important;
+}
+
+@media (max-width: 1200px){
+    .main_p .body0 {
+
+        background-image: url('/static/content/img/re-iphome13.jpg');
+    }
+
+}
+
+.main_p .body0 .info{
+    text-align: center;
+}
+
+.main_p .body0 h1{
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07143;
+}
+.main_p .body0 .img{
+    width:100%;
+    background-position:center center;
+
+
+}
+.main_p .body0 .img img{
+    background-position:center center;
+    max-width:100%;
+
+}
 
 
 .main_p .body1{
     display: flex;
     justify-content: center;
-    background: #000000;
+    background-color: #35283c;
 }
 
-@media (min-width: 1200px){
+@media (min-width: 900px){
 
 .main_p .body1 .img{
-    background-image: url('/static/content/img/top.webp');
+    background-image: url('/static/content/img/hero_iphone_13.jpg');
     background-repeat: no-repeat;
     background-position:center;
-    height:100vh;
+    max-height:545px;
     min-width:100%;
-    background-size:100%;
+
 }
 }
 
 
 
-@media (max-width: 1200px){
-
+@media (max-width: 900px){
 .main_p .body1 .img{
-    background-image: url('/static/content/img/aple.jpg');
+    background-image: url('/static/content/img/hero_iphone_13_small.jpg');
     background-repeat: no-repeat;
-    /*background-size:100%;*/
     background-position:center;
-    height:100vh;
+    max-height:545px;
     min-width:100%;
-}
 
+}
 }
 
 
@@ -253,6 +300,7 @@ body{
 .main_p .body1 .text .h{
     text-shadow: 2px 2px 3px white, 1px 1px 2px black;
     width:100%;
+    font-size: 1.9rem;
     color:black;
 }
 
@@ -260,11 +308,12 @@ body{
 
 .main_p .body1 .img .text{
     width:100%;
-    margin:3vh;
+    margin-top:3vh;
+    margin-bottom:3vh;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80vh;
+    height:505px;
 }
 
 
@@ -492,8 +541,8 @@ footer ul{
     flex-direction:column;
     justify-content: flex-end; /* space-between */
     text-align: center;
-
 }
+
 
 
 
@@ -523,6 +572,64 @@ footer ul{
     }
 
 }
+
+
+.category_menu{
+    margin: 0;
+    display: flex;
+
+    align-items: center;
+    overflow-x: auto;
+}
+.category_menu::-webkit-scrollbar {
+  display: none;
+}
+
+.category_menu_body{
+
+    min-width: 100%;
+    min-height: 50px;
+    display: flex
+
+}
+
+.category_menu .img_container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.category_menu .img_container .img{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.category_menu a{
+    color:#a9a9ab
+}
+
+
+
+
+.line-l {
+    margin: 5px 10px 5px 0px;
+    border-left: 2px solid #1e1e1c;
+    height: 90px;
+}
+.line-r {
+    margin: 5px 0px 5px 10px;
+    border-left: 2px solid #1e1e1c;
+    height: 90px;
+}
+
+
+
+.category_menu_body .img_container{
+    width:150px;
+
+
+}
+
 
 
 /* Детали товара */
@@ -599,8 +706,18 @@ footer ul{
 
 .background_choice{
     background:#1b1b1b;
-    border-radius:15px;
+
     color:white;
+}
+
+.background_choice_no_active{
+
+    border: solid #000000;
+    filter: blur(1px)
+}
+
+.filter{
+    filter: blur(1px)
 }
 
 .repairs .block2 .table{
@@ -632,8 +749,7 @@ footer ul{
 
 
 .repairs .images .image{
-    width:44%;
-    margin:2.5%;
+    width:49.5%;
     padding:2.5%;
     display:flex;
     justify-content:center;
@@ -663,8 +779,9 @@ footer ul{
 .you_basket .main{
     height:220px;
     margin:10px;
-    background:#cacaca;
+    background:#f5faff;
     border-radius:20px;
+    border: 4px outset;
 }
 .you_basket .main .img{
     display:flex;
@@ -680,6 +797,7 @@ footer ul{
 }
 
 .m_row{
+
     height:100%;
     display:flex;
     justify-content:center;

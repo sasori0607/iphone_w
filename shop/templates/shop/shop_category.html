@@ -1,10 +1,6 @@
 {% extends 'content/base.html' %}
 {% load static %}
 
-{% block title %}
-    {{title}}
-{% endblock %}
-
 
 
 {% block title %}
@@ -18,6 +14,121 @@
 
 
 {% block body %}
+
+
+
+
+<div style="background-color: #f9f9fa;" class="">
+
+    <div style="display:flex; align-items:center"  class="container">
+        <img class="l-raw" style="height:50px;" src="{% static 'content/img/l-row.png' %}" alt="">
+        <div class="line-l"></div>
+
+        <div class="category_menu">
+        <div class="">
+            <div class="category_menu_body">
+
+
+
+                <div class="img_container">
+                    <a class="a_img" href="">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/iphone_13_pro_light__ds4kck27sw02_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>iPhone 13 Pro</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/iphone_13_light__e8rinsezkn22_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>iPhone 13</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/iphone/iphone-12">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/iphone_12_light__c4p31z6j53ki_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>iPhone 12</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/iphone/iphone-12-pro-max">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/iphone_se_light__fpqqidn3yaaa_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>iPhone SE</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/iphone/iphone-11">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/iphone_11_light__ciapx3n8axea_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>iPhone 11</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/accessories">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/accessories_light__e4v7pj8sxi0y_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>Аксессуары</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/accessories">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/airpods_light__d6gyy84we4eq_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>AirPods</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/accessories">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/ipad_light__fcshltpasu6i_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>Ipad</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="img_container">
+                    <a class="a_img" href="/shop/accessories">
+                        <div class="img"><img style="height:60px;" src="{% static 'content/img/category_logs/shop_iphone_light__c6jevvf5ecya_large.svg' %}" alt=""></div>
+                        <div class="text">
+                            <p>Витриные/Буу</p>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+        <div class="line-r"></div>
+        <img class="r-raw" style="height:50px;" src="{% static 'content/img/r-row.png' %}" alt="">
+    </div>
+
+</div>
 
 <div class="category">
     <div class="container">
@@ -42,11 +153,6 @@
 
 </div>
 
-
-<!--{% for i in object %}-->
-<!--+-->
-<!--{{ i.title }}-->
-<!--{% endfor %}-->
 
 
 {% endblock %}

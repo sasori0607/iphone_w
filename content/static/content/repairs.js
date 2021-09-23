@@ -1,9 +1,9 @@
 
 $('.repairs .choice .low').click(function(){
     $('.repairs .choice .image').each(function() {
-        $( this ).removeClass( "background_choice" )
+        $( this ).removeClass( "background_choice" ).addClass( "background_choice_no_active" )
     })
-    $(this).addClass( "background_choice" )
+    $(this).addClass( "background_choice" ).removeClass( "background_choice_no_active" )
     $('.repairs .table table').html(`
           <tr>
             <th>Диагностика iPhone,iPod ( в случае отказа от ремонта)</th>
@@ -61,9 +61,9 @@ $('.repairs .choice .low').click(function(){
 
 $('.repairs .choice .high').click(function(){
     $('.repairs .choice .image').each(function() {
-        $( this ).removeClass( "background_choice" )
+        $( this ).removeClass( "background_choice" ).addClass( "background_choice_no_active" )
     })
-    $(this).addClass( "background_choice" )
+    $(this).addClass( "background_choice" ).removeClass( "background_choice_no_active" )
     $('.repairs .table table').html(`
         <tr>
             <th>Услуга</th>
